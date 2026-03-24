@@ -1,0 +1,51 @@
+{
+  "personal": {
+    "name": "Manjunath Honamore",
+    "title": "Backend Java Engineer",
+    "email": "manjunath0honmore@gmail.com",
+    "github": "TB5304",
+    "linkedin": "tb5304",
+    "tagline": "Building scalable microservices for 28M+ users."
+  },
+  "metrics": [
+    { "label": "Latency Reduction", "value": "50%", "detail": "Optimized MPIN via Redis" },
+    { "label": "User Base", "value": "28M+", "detail": "ICICI iMobile Banking" },
+    { "label": "Developer Impact", "value": "250+", "detail": "Engineers using my SDK" }
+  ],
+  "experience": [
+    {
+      "company": "Tata Consultancy Services",
+      "role": "Java Developer",
+      "period": "Jun 2023 - Present",
+      "highlights": [
+        "Designed scalable Spring Boot microservices for high-throughput banking.",
+        "Built MPIN service with Redis write-through caching, reducing latency by 50%.",
+        "Created reusable FSL Middleware SDK for 250+ engineers.",
+        "Integrated CIBIL microservice with stream-based payload optimization."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Food Delivery Platform",
+      "tech": ["Kafka", "Resilience4j", "Redis"],
+      "description": "Event-driven message streaming pipeline for order workflows."
+    },
+    {
+      "name": "JSON-to-YAML Maven Tool",
+      "tech": ["Java", "Maven"],
+      "description": "Automated transformation improving API documentation workflows."
+    }
+  ],
+  "skills": {
+    "languages": ["Java 8/17/21", "SQL"],
+    "backend": ["Spring Boot", "Hibernate", "Microservices", "Kafka", "Redis"],
+    "architecture": ["Domain-Driven Design", "Distributed Systems", "API Gateway"]
+  },
+  "education": {
+    "degree": "B.Tech in Civil Engineering",
+    "college": "VIT, Pune",
+    "cgpa": "9.01",
+    "period": "2019-2023"
+  }
+}
