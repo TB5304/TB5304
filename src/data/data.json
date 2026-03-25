@@ -7,6 +7,31 @@
     "linkedin": "tb5304",
     "tagline": "Building scalable microservices for 28M+ users."
   },
+  "certifications": [
+    {
+      "name": "AWS Certified Developer - Associate",
+      "issuer": "Amazon Web Services",
+      "icon": "aws"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Qualified GATE CSE 2023",
+      "icon": "award"
+    },
+    {
+      "title": "Qualified GATE CE 2022",
+      "icon": "award"
+    },
+    {
+      "title": "CodeVita S10 - Rank 2817",
+      "icon": "code"
+    },
+    {
+      "title": "Star Performer of the Year 2025 - TCS",
+      "icon": "star"
+    }
+  ],
   "metrics": [
     { "label": "Latency Reduction", "value": "50%", "detail": "Optimized MPIN via Redis" },
     { "label": "User Base", "value": "28M+", "detail": "ICICI iMobile Banking" },
@@ -27,19 +52,65 @@
   ],
   "projects": [
     {
-      "name": "Food Delivery Platform",
-      "tech": ["Kafka", "Resilience4j", "Redis"],
-      "description": "Event-driven message streaming pipeline for order workflows."
+      "name": "JSON To YAML",
+      "period": "Aug 2024 – Sep 2024",
+      "company": "Tata Consultancy Services",
+      "tech": ["Java", "Maven"],
+      "description": "Automated transformation improving API documentation workflows.",
+      "github": "https://github.com/TB5304/JsonToYaml"
     },
     {
-      "name": "JSON-to-YAML Maven Tool",
-      "tech": ["Java", "Maven"],
-      "description": "Automated transformation improving API documentation workflows."
+      "name": "Cyber Attack Classification Using DL",
+      "period": "Feb 2023 – May 2023",
+      "company": "Vishwakarma Institute Of Technology",
+      "tech": ["Python", "Deep Learning", "TensorFlow"],
+      "description": "Deep learning model for classifying cyber attacks using neural networks.",
+      "github": null
+    },
+    {
+      "name": "GVF Profile Calculator",
+      "period": "Mar 2023 – May 2023",
+      "company": "Vishwakarma Institute Of Technology",
+      "tech": ["Python", "Streamlit", "Hydrology"],
+      "description": "Streamlit-based calculator for GVF profile analysis.",
+      "demo": "https://tb5304-gvf-streamlitcode-id2s8j.streamlit.app/"
+    },
+    {
+      "name": "BSE PDF Scanner",
+      "period": "Mar 2023 – Apr 2023",
+      "company": "Our Broking",
+      "tech": ["Python", "Requests", "PDF Processing"],
+      "description": "Automated scanner for BSE NSE tender documents.",
+      "github": "https://github.com/TB5304/Search_NSE_Tendors"
+    },
+    {
+      "name": "Text Analysis - Positive/Negative & Subjectivity",
+      "period": "Jan 2023 – Mar 2023",
+      "company": "Vishwakarma Institute Of Technology",
+      "tech": ["Python", "NLP", "Tokenization"],
+      "description": "Sentiment analysis tool for text classification and subjectivity scoring.",
+      "github": null
+    },
+    {
+      "name": "Grocery Management System",
+      "period": "2023",
+      "company": "Tata Consultancy Services",
+      "tech": ["Java", "Spring Boot", "SQL"],
+      "description": "ILP project for grocery inventory and order management.",
+      "github": "https://github.com/TB5304/Grocery_System"
+    },
+    {
+      "name": "Food Delivery Platform",
+      "period": "2024",
+      "company": "Personal Project",
+      "tech": ["Kafka", "Resilience4j", "Redis"],
+      "description": "Event-driven message streaming pipeline for order workflows.",
+      "github": null
     }
   ],
   "skills": {
-    "languages": ["Java 8/17/21", "SQL"],
-    "backend": ["Spring Boot", "Hibernate", "Microservices", "Kafka", "Redis"],
+    "languages": ["Java 8/17/21", "Python", "SQL"],
+    "backend": ["Spring Boot", "Hibernate", "Microservices", "Kafka", "Redis", "AWS"],
     "architecture": ["Domain-Driven Design", "Distributed Systems", "API Gateway"]
   },
   "education": {

@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
-import { ExternalLink, ArrowRight, Layers, GitBranch } from 'lucide-react';
+import { ExternalLink, ArrowRight, Layers, GitBranch, Globe, Calendar, Building2 } from 'lucide-react';
 import data from '../data/data.json';
 
-const projectIcons = {
-  'Food Delivery Platform': <Layers size={24} />,
-  'JSON-to-YAML Maven Tool': <GitBranch size={24} />,
-};
-
-const projectGradients = {
-  'Food Delivery Platform': 'from-orange-400 to-red-500',
-  'JSON-to-YAML Maven Tool': 'from-blue-400 to-indigo-500',
-};
+const projectGradients = [
+  'from-orange-400 to-red-500',
+  'from-blue-400 to-indigo-500',
+  'from-emerald-400 to-teal-500',
+  'from-purple-400 to-pink-500',
+  'from-cyan-400 to-blue-500',
+  'from-amber-400 to-orange-500',
+  'from-green-400 to-emerald-500',
+];
 
 export default function Projects() {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,15 +58,14 @@ export default function Projects() {
             Featured <span className="text-emerald-400">Projects</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Showcasing distributed systems and developer tools that solve real-world problems
+            Showcasing distributed systems, ML models, and developer tools
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => {
-            const gradient = projectGradients[project.name] || 'from-emerald-400 to-teal-500';
-            const icon = projectIcons[project.name] || <Layers size={24} />;
+            const gradient = projectGradients[index % projectGradients.length];
 
             return (
               <div
@@ -74,38 +73,75 @@ export default function Projects() {
                 className={`glass-card rounded-2xl overflow-hidden group hover:border-emerald-500/20 transition-all duration-500 hover:-translate-y-2 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Card Header with gradient */}
                 <div className={`h-2 bg-gradient-to-r ${gradient}`} />
 
-                <div className="p-6 sm:p-8">
-                  {/* Icon & Title */}
-                  <div className="flex items-start justify-between mb-6">
+                <div className="p-6">
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-4">
                     <div className={`p-3 rounded-xl bg-gradient-to-br ${gradient} text-white group-hover:shadow-lg transition-shadow`}>
-                      {icon}
+                      <Layers size={20} />
                     </div>
-                    <button className="p-2 rounded-lg text-slate-500 hover:text-emerald-400 hover:bg-emerald-400/10 transition-all">
-                      <ExternalLink size={18} />
-                    </button>
+                    <div className="flex gap-2">
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-lg text-slate-500 hover:text-emerald-400 hover:bg-emerald-400/10 transition-all"
+                          aria-label="GitHub"
+                        >
+                          <GitBranch size={16} />
+                        </a>
+                      )}
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-lg text-slate-500 hover:text-emerald-400 hover:bg-emerald-400/10 transition-all"
+                          aria-label="Live Demo"
+                        >
+                          <Globe size={16} />
+                        </a>
+                      )}
+                    </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
                     {project.name}
                   </h3>
 
+                  {/* Period & Company */}
+                  <div className="flex items-center gap-3 mb-3 text-xs text-slate-500">
+                    {project.period && (
+                      <span className="flex items-center gap-1">
+                        <Calendar size={12} />
+                        {project.period}
+                      </span>
+                    )}
+                    {project.company && (
+                      <span className="flex items-center gap-1">
+                        <Building2 size={12} />
+                        {project.company}
+                      </span>
+                    )}
+                  </div>
+
                   {/* Description */}
-                  <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                  <p className="text-slate-400 text-sm leading-relaxed mb-4">
                     {project.description}
                   </p>
 
                   {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 rounded-full text-xs font-medium bg-slate-800/50 text-slate-300 border border-slate-700/50"
+                        className="px-2 py-0.5 rounded-full text-xs font-medium bg-slate-800/50 text-slate-300 border border-slate-700/50"
                       >
                         {tech}
                       </span>
@@ -113,20 +149,22 @@ export default function Projects() {
                   </div>
 
                   {/* View Details link */}
-                  <div className="flex items-center gap-2 text-emerald-400 text-sm font-medium group/link cursor-pointer">
-                    <span>View Details</span>
-                    <ArrowRight
-                      size={16}
-                      className="group-hover/link:translate-x-1 transition-transform"
-                    />
-                  </div>
+                  {(project.github || project.demo) && (
+                    <div className="flex items-center gap-2 text-emerald-400 text-sm font-medium group/link cursor-pointer pt-2 border-t border-slate-700/50">
+                      <span>View Details</span>
+                      <ArrowRight
+                        size={14}
+                        className="group-hover/link:translate-x-1 transition-transform"
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* Additional Info */}
+        {/* GitHub CTA */}
         <div
           className={`mt-16 glass-card rounded-2xl p-6 sm:p-8 text-center transition-all duration-700 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
