@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Award, Code, Star, BadgeCheck } from 'lucide-react';
+import { Award, Code, Star, BadgeCheck, ExternalLink } from 'lucide-react';
 import data from '../data/data.json';
 
 const iconMap = {
@@ -71,24 +71,43 @@ export default function Achievements() {
               Certifications
             </h3>
             <div className="space-y-4">
-              {certifications.map((cert, index) => (
-                <div
-                  key={index}
-                  className="glass-card rounded-2xl p-6 hover:border-emerald-500/20 transition-all duration-300 group hover:-translate-y-1"
-                >
+              {certifications.map((cert, index) => {
+                const certContent = (
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 text-white group-hover:shadow-lg transition-shadow">
                       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                       </svg>
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h4 className="text-lg font-semibold text-white">{cert.name}</h4>
                       <p className="text-slate-400 text-sm">{cert.issuer}</p>
                     </div>
+                    {cert.url && (
+                      <ExternalLink size={16} className="text-slate-500 group-hover:text-emerald-400 transition-colors shrink-0" />
+                    )}
                   </div>
-                </div>
-              ))}
+                );
+
+                return cert.url ? (
+                  <a
+                    key={index}
+                    href={cert.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass-card rounded-2xl p-6 hover:border-emerald-500/20 transition-all duration-300 group hover:-translate-y-1 block"
+                  >
+                    {certContent}
+                  </a>
+                ) : (
+                  <div
+                    key={index}
+                    className="glass-card rounded-2xl p-6 hover:border-emerald-500/20 transition-all duration-300 group hover:-translate-y-1"
+                  >
+                    {certContent}
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -105,22 +124,40 @@ export default function Achievements() {
             <div className="space-y-4">
               {achievements.map((achievement, index) => {
                 const Icon = iconMap[achievement.icon] || Award;
-                return (
+                const content = (
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 text-white group-hover:shadow-lg transition-shadow shrink-0">
+                      <Icon size={20} />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                        {achievement.title}
+                      </h4>
+                    </div>
+                    {achievement.url && (
+                      <ExternalLink size={16} className="text-slate-500 group-hover:text-emerald-400 transition-colors shrink-0 mt-1" />
+                    )}
+                  </div>
+                );
+
+                return achievement.url ? (
+                  <a
+                    key={index}
+                    href={achievement.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass-card rounded-2xl p-6 hover:border-emerald-500/20 transition-all duration-300 group hover:-translate-y-1 block"
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
+                    {content}
+                  </a>
+                ) : (
                   <div
                     key={index}
                     className="glass-card rounded-2xl p-6 hover:border-emerald-500/20 transition-all duration-300 group hover:-translate-y-1"
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 text-white group-hover:shadow-lg transition-shadow shrink-0">
-                        <Icon size={20} />
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors">
-                          {achievement.title}
-                        </h4>
-                      </div>
-                    </div>
+                    {content}
                   </div>
                 );
               })}

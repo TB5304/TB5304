@@ -11,25 +11,30 @@
     {
       "name": "AWS Certified Developer - Associate",
       "issuer": "Amazon Web Services",
-      "icon": "aws"
+      "icon": "aws",
+      "url": "https://www.credly.com/users/manjunath-honamore"
     }
   ],
   "achievements": [
     {
       "title": "Qualified GATE CSE 2023",
-      "icon": "award"
+      "icon": "award",
+      "url": null
     },
     {
       "title": "Qualified GATE CE 2022",
-      "icon": "award"
+      "icon": "award",
+      "url": null
     },
     {
       "title": "CodeVita S10 - Rank 2817",
-      "icon": "code"
+      "icon": "code",
+      "url": "https://www.tcscodevita.com/"
     },
     {
       "title": "Star Performer of the Year 2025 - TCS",
-      "icon": "star"
+      "icon": "star",
+      "url": null
     }
   ],
   "metrics": [
@@ -57,7 +62,8 @@
       "company": "Tata Consultancy Services",
       "tech": ["Java", "Maven"],
       "description": "Automated transformation improving API documentation workflows.",
-      "github": "https://github.com/TB5304/JsonToYaml"
+      "github": "https://github.com/TB5304/JsonToYaml",
+      "demo": null
     },
     {
       "name": "Cyber Attack Classification Using DL",
@@ -65,7 +71,8 @@
       "company": "Vishwakarma Institute Of Technology",
       "tech": ["Python", "Deep Learning", "TensorFlow"],
       "description": "Deep learning model for classifying cyber attacks using neural networks.",
-      "github": null
+      "github": null,
+      "demo": null
     },
     {
       "name": "GVF Profile Calculator",
@@ -73,6 +80,7 @@
       "company": "Vishwakarma Institute Of Technology",
       "tech": ["Python", "Streamlit", "Hydrology"],
       "description": "Streamlit-based calculator for GVF profile analysis.",
+      "github": null,
       "demo": "https://tb5304-gvf-streamlitcode-id2s8j.streamlit.app/"
     },
     {
@@ -81,7 +89,8 @@
       "company": "Our Broking",
       "tech": ["Python", "Requests", "PDF Processing"],
       "description": "Automated scanner for BSE NSE tender documents.",
-      "github": "https://github.com/TB5304/Search_NSE_Tendors"
+      "github": "https://github.com/TB5304/Search_NSE_Tendors",
+      "demo": null
     },
     {
       "name": "Text Analysis - Positive/Negative & Subjectivity",
@@ -89,7 +98,8 @@
       "company": "Vishwakarma Institute Of Technology",
       "tech": ["Python", "NLP", "Tokenization"],
       "description": "Sentiment analysis tool for text classification and subjectivity scoring.",
-      "github": null
+      "github": null,
+      "demo": null
     },
     {
       "name": "Grocery Management System",
@@ -97,7 +107,8 @@
       "company": "Tata Consultancy Services",
       "tech": ["Java", "Spring Boot", "SQL"],
       "description": "ILP project for grocery inventory and order management.",
-      "github": "https://github.com/TB5304/Grocery_System"
+      "github": "https://github.com/TB5304/Grocery_System",
+      "demo": null
     },
     {
       "name": "Food Delivery Platform",
@@ -105,7 +116,8 @@
       "company": "Personal Project",
       "tech": ["Kafka", "Resilience4j", "Redis"],
       "description": "Event-driven message streaming pipeline for order workflows.",
-      "github": null
+      "github": null,
+      "demo": null
     }
   ],
   "skills": {
