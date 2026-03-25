@@ -114,8 +114,8 @@ export default function Hero() {
   const handleDownloadResume = () => {
     // Create a link to download resume
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // User should place resume.pdf in public folder
-    link.download = 'Manjunath_Honamore_Resume.pdf';
+    link.href = '/Manjunath_Java_3YOE.pdf';
+    link.download = 'Manjunath_Java_3YOE.pdf';
     link.click();
   };
 

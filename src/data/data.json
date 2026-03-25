@@ -12,10 +12,21 @@
       "name": "AWS Certified Developer - Associate",
       "issuer": "Amazon Web Services",
       "icon": "aws",
-      "url": "https://www.credly.com/users/manjunath-honamore"
+      "url": "https://www.linkedin.com/posts/tb5304_certificate-activity-7331302854940319744-Y_pE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC0bYqcBCFU-SF9IDEJEovuMnxzh3fFsSvA"
     }
   ],
   "achievements": [
+
+    {
+      "title": "CodeVita S10 - Rank 2817",
+      "icon": "code",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:6935239435642908672/?skipRedirect=true"
+    },
+    {
+      "title": "Star Performer of the Year 2025 - TCS",
+      "icon": "star",
+      "url": "https://www.linkedin.com/posts/tb5304_starperformer-tcs-technicalexcellence-activity-7334439739707523072-3gYv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC0bYqcBCFU-SF9IDEJEovuMnxzh3fFsSvA"
+    },
     {
       "title": "Qualified GATE CSE 2023",
       "icon": "award",
@@ -24,16 +35,6 @@
     {
       "title": "Qualified GATE CE 2022",
       "icon": "award",
-      "url": null
-    },
-    {
-      "title": "CodeVita S10 - Rank 2817",
-      "icon": "code",
-      "url": "https://www.tcscodevita.com/"
-    },
-    {
-      "title": "Star Performer of the Year 2025 - TCS",
-      "icon": "star",
       "url": null
     }
   ],
